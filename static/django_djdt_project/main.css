@@ -1,0 +1,177 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  ul {
+    margin: 0;
+  }
+  
+  .bg-steel {
+    background-color: #5f788a;
+  }
+  
+  .navbar {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+  
+  .content-section {
+    background: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 16px;
+  }
+  
+  
+  .card-group {
+    flex-direction: column;
+  }
+  
+  
+  
+  .card-img-start {
+    min-width: 65px;
+    min-height: 65px;
+    height: 65px;
+    width: 65px;
+    background-size: cover;
+  }
+  
+  .card-header {
+    border-bottom: 1px solid #e3e3e3;
+    background-color: #eeeeee;
+  }
+  
+  
+  .align-self-start a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .align-self-start {
+    /*display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;*/
+    align-self: flex-start;
+    margin: 8px;
+  }
+  
+  .align-self-start-inner {
+    /*display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;*/
+    align-self: flex-start;
+    border-bottom: 1px solid ;
+  }
+  
+  .card-title {
+    color: #444444;
+    text-decoration: none;
+    margin-bottom: 0rem;
+  }
+  
+  a.card-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
+  
+  
+  .card m-1 {
+    border: 1px solid rgba(0,0,0,.125);
+  }
+  
+  .card-body {
+    /*white-space: pre-line;*/
+  }
+  
+  .card-user-link {
+    color: #428bca;
+    text-decoration: none;
+  
+  }
+  
+  a.card-user-link:hover {
+    color: #444444;
+    text-decoration: none;
+  }
+  
+  .card-img-start-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
+  
+  .account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .account-heading {
+    font-size: 2.5rem;
+  }
+  
+  #page-btns {
+    text-align: center;
+  }
+  
+  #posts-col {
+    text-align: center;
+  }
+  
+  .carousel {
+    max-height: 30rem;
+    min-width: auto;
+    align-content: center;
+  }
+  
+  
+  .carousel-inner > .carousel-item {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    /*overflow: visible;*/
+    overflow: hidden;
+  }
+  
+  
+  .carousel-inner > .active {
+    /*width: 100%;*/
+  }
+  
+  .carousel-inner img {
+    /*display:block;
+    max-height: 30rem;
+    min-width: auto;*/
+  }
+  
+  
+  .carousel-item img {
+    max-height: 20rem;
+    min-width: auto;
+    overflow: hidden;
+  }
+  
+  .carousel-caption {
+    /*text-decoration: */
+  }
+  

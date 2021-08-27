@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+    app:
+        build: .
+        volumes:
+            - .:/code
+        ports:
+            - "8002:8002"
+        image: django_djdt_project:django
+        container_name: django_djdt_project
+        #command: gunicorn resume_project.wsgi:application --bind 0.0.0.0:8000
+        command: python manage.py runserver 0.0.0.0:8002 --settings=djdt_project.settings
+        environment: 
+            - DJANGO_SETTINGS_MODULE=djdt_project.settings
+
+    cache:
+        image: memcached
+        ports:
+            - "11211:11211"
+        entrypoint:
+            - memcached
+            - -m 64

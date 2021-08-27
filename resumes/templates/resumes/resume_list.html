@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if resume_list %}
+        <div class="cardgroup">
+            {% for resume in resume_list %}
+            <!-- TODO: Consider to use AJAX to request the resume html from another view. -->
+                <div class="card m-2 overflow-hidden">
+                    <div class="card-header">
+                        <div class="d-flex bd-highlight align-items-start">
+                            <img class="rounded-circle img-thumbnail center card-img-start" src="{{ resume.author.profile.image.url }}" alt=" ">
+                                
+                            <div class="align-self-start flex-fill"><!-- card-user-start -->
+                                <div class="align-self-start-inner">
+                                    <a id="name" class="card-user-link" href="#">{{ resume.author }}</a>
+                                      <!-- Format the date: -->
+                                      <small class="text-muted">{{ resume.created_at|date:"F d, Y" }}</small>
+                                      <!-- https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#date -->
+                                </div>
+                                
+                                
+                                <h5 class="card-title align-self-end">
+                                    <a class="card-title" href="#">{{ resume.filename }}</a>
+                                </h5>
+                            </div>
+                        </div>
+                            
+                    </div>
+
+                    <div class="card-body">
+                        
+                        
+                        <p class="card-text">{{resume.resume_file}}</p>
+                        <!-- https://getbootstrap.com/docs/5.0/helpers/ratio/ -->
+
+                        <hr/>
+                        <p class="card-text">{{ resume.text }}**</p>
+
+                        
+                    </div>
+
+                    <div class="card-footer">
+                        {% if resume.tags.all %}
+                            Tags:
+                        {% endif %}
+                        {% for tag in resume.tags.all %}
+                            <span class="badge bg-info rounded-pill text-dark">{{ tag.name }}</span>
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+                
+            {% endfor %}
+
+        </div>
+
+        <br>
+
+    {% else %}
+        <strong>No Resumes was found</strong>
+    {% endif %}
+    
+{% endblock content %}

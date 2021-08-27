@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+<!-- Load crispy form -->
+{% load crispy_forms_tags %} 
+{% block content %}
+
+    <div class="content-section">
+        <h2>Hi</h2>
+
+        <ol>
+            
+            <li><a href="{% url 'resumes:resume_list' %}">Resume list</a></li>
+            
+        </ol>
+
+    </div>
+{% endblock content %}
