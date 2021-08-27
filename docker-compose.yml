@@ -10,7 +10,11 @@ services:
         image: django_djdt_project:django
         container_name: django_djdt_project
         #command: gunicorn resume_project.wsgi:application --bind 0.0.0.0:8000
-        command: python manage.py runserver 0.0.0.0:8002 --settings=djdt_project.settings
+        command: >
+            sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py loaddata somedata.json &&
+             python manage.py runserver 0.0.0.0:8002 --settings=djdt_project.settings"
         environment: 
             - DJANGO_SETTINGS_MODULE=djdt_project.settings
 

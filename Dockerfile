@@ -14,8 +14,6 @@ RUN apt-get -y upgrade
 
 #RUN apt-get install memcached
 RUN pip install django-debug-toolbar
-RUN pip install coverage
-RUN pip install selenium
 
 COPY . /code/
 
