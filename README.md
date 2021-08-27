@@ -1,9 +1,11 @@
-#djdt_project
+# djdt_project
 
-Use:
+Use:  
 First time: "docker-compose up"  
 Any sequential call: "docker-compose start"  
 
+  
+  
 Note:  
 1. See docker-compose.yml file for load data process.  
 2. The server is in 8002 port.  
